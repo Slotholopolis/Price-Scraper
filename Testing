@@ -1,0 +1,16 @@
+import requests
+from bs4 import BeautifulSoup as bs, element
+import pandas as pd
+import csv
+
+df = pd.read_csv('C:\Python Scripts\Scraper\cardpricing.csv')
+
+for i in range(0):
+    link = df.at[i, 'Url']
+    if 'Url' == "NaN":
+        break
+
+
+#df.at[0, 'Market Price'] = 22
+
+print(link)
