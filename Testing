@@ -5,12 +5,24 @@ import csv
 
 df = pd.read_csv('C:\Python Scripts\Scraper\cardpricing.csv')
 
-for i in range(0):
+rowLen = df.shape[0]
+
+url = 'https://www.tcgplayer.com/product/518648/flesh-and-blood-tcg-bright-lights-phantom-tidemaw?page=1&Language=English'
+
+def get_url(url):
+    source = requests.get(url).text
+    return bs(source, "html.parser")
+
+soup.find('div', )
+
+#price = div.listing-item_listing-data__info__price
+
+for i in range(0, rowLen):
     link = df.at[i, 'Url']
-    if 'Url' == "NaN":
+    i+=1
+    print(link)
+    if i == rowLen:
         break
 
 
 #df.at[0, 'Market Price'] = 22
-
-print(link)
